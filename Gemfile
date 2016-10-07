@@ -4,7 +4,14 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
+# modify statrs
+gem 'sqlite3', group:[:delelopment, :test] 
+gem 'pg', group: :production
+#gem 'pg', group: :production 
+gem 'rails_12factor', group: :production 
+# modification end here
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -46,7 +53,7 @@ end
 
 # dk modify started here
 gem 'bootstrap-sass'
-gem 'sqlite3'
+
 group :doc do
   # refer to book
   gem 'sdoc', require:false
